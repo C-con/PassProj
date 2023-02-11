@@ -6,13 +6,13 @@
     <title>Unity WebGL Player | My passion project</title>
     <style>
       full {
-        width: 1vw;
-        height: 1vh;
+        width: 100vw;
+        height: 100vh;
       }  
     </style>
   </head>
   <body style="text-align: center" id=full>
-    <canvas id="unity-canvas"></canvas>
+    <canvas id="unity-canvas" id=full></canvas>
     <script src="Build/Build 2.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -23,7 +23,7 @@
         companyName: "DefaultCompany",
         productName: "My passion project",
         productVersion: "0.1",
-        //matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
