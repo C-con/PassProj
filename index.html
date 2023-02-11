@@ -8,11 +8,12 @@
       full {
         width: 100vw;
         height: 100vh;
+        margin: 0px;
       }  
     </style>
   </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" id=full></canvas>
+  <body style="text-align: center" id=full>
+    <canvas id="unity-canvas"></canvas>
     <script src="Build/Build 2.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
