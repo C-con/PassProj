@@ -11,14 +11,14 @@
         position:relative;
       }
       body{
-        height:100%; /* force the BODY element to match the height of the HTML element */
-        width:100%;
+        height:vh; /* force the BODY element to match the height of the HTML element */
+        width:vw;
         margin: 0px;
       } 
       #full{
         position:absolute;
-        height:100%;
-        width:100%;
+        height:vh;
+        width:vw;
         top:0;
         bottom:0;
         left:0;
@@ -28,7 +28,7 @@
     }
     </style>
   </head>
-  <body bgcolor:#000000>
+  <body>
     <canvas id="unity-canvas" id=full></canvas>
     <script src="Build/Build 2.loader.js"></script>
     <script>
