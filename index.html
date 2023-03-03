@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | My passion project</title>
+    <style>
+      html{
+        min-height:100%;/* make sure it is at least as tall as the viewport */
+        min-width:100%;
+        position:relative;
+      }
+      body{
+        height:100vh;/* force the BODY element to match the height of the HTML element */
+        width:100vw;
+        margin: 0px;
+      } 
+    </style>
+  </head>
+  <body bgcolor=#f44333;>
+    <canvas id="unity-canvas" style="position:absolute;width:100vw;height: 100vw * 4/3;margin-bottom: auto;margin-top: auto;top:0;bottom:0;left:0;right:0;overflow:hidden;"></canvas>
+    <script src="Build/Build 2.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Build 3.data",
+        frameworkUrl: "Build/Build 3.framework.js",
+        codeUrl: "Build/Build 3.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "My passion project",
+        productVersion: "0.1",
+        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
